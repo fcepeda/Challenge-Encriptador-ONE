@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador ONE</title>
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <main class="main-content">
@@ -20,16 +21,21 @@
                 <p class="warning-message">Solo letras minusculas y sin acentos</p>
             </div>
             <div class="buttons-container">
-                <button class="button-encrypt">Encriptar</button>
-                <button class="button-dencrypt">Desencriptar</button>
+                <button class="button-encrypt" onclick="startEncrypt()">Encriptar</button>
+                <button class="button-dencrypt"onclick="startDencrypt()">Desencriptar</button>
             </div>
         </div>
-        <div class="result-container">
-            
-            <h1>Ningun mensaje fue encontrado</h1>
-            <p1>Ingresa el texto que desees encriptar o desencriptar</p1>
+        <div class="result-container" id="result-container">
+            <h1 class="hidden">Ningun mensaje fue encontrado</h1>
+            <p1 class="hidden">Ingresa el texto que desees encriptar o desencriptar</p1>
+            <div class="result-text" id="word"></div>
+            <button class="button-copy" id="copyButton" onclick="copyResult()">Copiar</button>
         </div>
     </main>
+    <footer class="footer">
+        <p class="footer-text">Desarrollado por Francisco Cepeda (Lhite)</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
 
